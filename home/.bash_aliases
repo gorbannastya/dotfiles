@@ -21,3 +21,6 @@ alias ls='ls -FGH'
 
 # IP addresses
 alias ip='dig @resolver1.opendns.com myip.opendns.com +short'
+
+# Open dreamtrips folder
+alias dt='cd ~/Development/DreamTrips-iOS'
