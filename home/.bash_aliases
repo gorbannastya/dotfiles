@@ -22,5 +22,11 @@ alias ls='ls -FGH'
 # IP addresses
 alias ip='dig @resolver1.opendns.com myip.opendns.com +short'
 
+# Open dotfiles
+alias godot='cd ~/.dotfiles'
+
+# Open projects folder
+alias godev='cd ~/Development'
+
 # Open dreamtrips folder
-alias dt='cd ~/Development/DreamTrips-iOS'
+alias godt='cd ~/Development/DreamTrips-iOS'
