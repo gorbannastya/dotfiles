@@ -1,23 +1,33 @@
 # Homebrew additions
 tap 'caskroom/cask'
+tap 'oclint/formulae'
 tap 'homebrew/dupes'
 
 # Homebrew apps
 brew 'mas'
+
+# Work
+brew 'rbenv'
 brew 'mogenerator'
 brew 'carthage'
-brew 'rbenv'
+brew 'oclint'
+brew 'uncrustify'
+
+cask 'atom'
+cask 'appcode'
+cask 'sourcetree'
+cask 'zoomus'
+cask 'zeplin'
+
+mas 'Xcode', id: 497799835
+mas 'Slack', id: 803453959
+mas 'Easy APNs Provider', id: 989622350
 
 # Cask
-cask 'appcode'
-cask 'atom'
 cask 'skype'
 cask 'wwdc'
-cask 'zeplin'
 cask 'anki'
-cask 'sourcetree'
 cask 'real-vnc'
-cask 'zoomus'
 cask 'flux'
 
 # Torrents
@@ -29,8 +39,5 @@ cask 'audacity-lame-library'
 cask 'audacity'
 
 # AppStore
-mas 'Xcode', id: 497799835
-mas 'Slack', id: 803453959
 mas 'Pomodoro One', id: 907364780
-mas 'Easy APNs Provider', id: 989622350
 mas 'Wunderlist', id: 410628904
