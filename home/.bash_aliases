@@ -25,6 +25,9 @@ alias ip='dig @resolver1.opendns.com myip.opendns.com +short'
 # Open dotfiles
 alias godot='cd ~/.dotfiles'
 
+# Open appcode
+alias appcode="open -a AppCode.app"
+
 # Open projects folder
 alias godev='cd ~/Development'
 
