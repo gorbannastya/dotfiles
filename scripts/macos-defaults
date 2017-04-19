@@ -68,6 +68,11 @@ defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -boolean false
 # in the Login window (default: not set).
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
+# Keyboard
+
+# Toggle keyboard to use F1 as a functional keys without fn
+sudo defaults write -g com.apple.keyboard.fnState -bool true
+
 # Desktop & Screen Saver
 # ----------------------------------------------------------------------------
 
