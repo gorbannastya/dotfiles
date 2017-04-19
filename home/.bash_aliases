@@ -30,6 +30,3 @@ alias appcode="open -a AppCode.app"
 
 # Open projects folder
 alias godev='cd ~/Development'
-
-# Open dreamtrips folder
-alias godt='cd ~/Development/DreamTrips-iOS'
