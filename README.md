@@ -1,6 +1,6 @@
 # Dotfiles
 
-My OS X configuration files and scripts.
+My MacOS configuration files and scripts.
 
 ## Installation
 
@@ -8,7 +8,7 @@ The installation requires [Git](http://git-scm.com) which comes standard with
 [Xcode](https://developer.apple.com/xcode/) or the
 [Command Line Developer Tools](https://developer.apple.com/downloads/index.action?=command%20line%20tools).
 
-Starting with OS X Mavericks, the Command Line Developer Tools can be easily
+Starting with MacOS Mavericks, the Command Line Developer Tools can be easily
 installed using `xcode-select --install`.
 
 Installing these dotfiles will overwrite already existing files in your home
@@ -29,6 +29,13 @@ cd ~/.dotfiles
 source bootstrap
 ```
 
+## Post-install
+```bash
+sudo xcodebuild -license accept
+
+rbenv init
+```
+
 ## Features
 
 ### Homebrew Formulae
@@ -44,9 +51,9 @@ brew bundle --global
 
 This will install all the Homebrew formulae listed in `.Brewfile`.
 
-### OS X Defaults
+### MacOS Defaults
 
-On a new Mac you may want to set some sane OS X defaults by running the
+On a new Mac you may want to set some sane MacOS defaults by running the
 `osx-defaults` script.
 
 ```bash

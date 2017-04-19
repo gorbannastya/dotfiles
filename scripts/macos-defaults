@@ -2,24 +2,24 @@
 #
 # osx-defaults
 #
-# Set reasonable OS X defaults.
+# Set reasonable MacOS defaults.
 #
-# Thanks to Mathias Bynens' OS X defaults script:
+# Thanks to Mathias Bynens' MacOS defaults script:
 # - https://github.com/mathiasbynens/dotfiles/blob/master/.osx
 
 PROG=${0##*/}
 
-# OS X only...
+# MacOS only...
 if [[ $(uname) != "Darwin" ]]
 then
-  echo "$PROG script is for OS X only!"
+  echo "$PROG script is for MacOS only!"
   exit 1
 fi
 
-# OS X El Capitan only...
-if ! [[ $(sw_vers -productVersion) =~ ^10\.11\..+ ]]
+# MacOS version check
+if ! [[ $(sw_vers -productVersion) =~ ^10\.12\..+ ]]
 then
-  echo "$PROG script is intended for OS X versions 10.11.x"
+  echo "$PROG script is intended for MacOS versions 10.11.x"
   exit 1
 fi
 
@@ -32,6 +32,12 @@ sudo -v
 
 # Keep-alive: update existing `sudo` time stamp until `.macos` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+
+# Accept XCode license
+sudo xcodebuild -license accept
+
+# Init rbenv
+rbenv init
 
 # Security
 # ----------------------------------------------------------------------------
@@ -58,7 +64,7 @@ defaults write NSGlobalDomain NSTableViewDefaultSizeMode -integer 1
 # Save new documents to disk (not to iCloud) (default: not set).
 defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -boolean false
 
-# Report computer name, OS X version and IP address when clicking the clock
+# Report computer name, MacOS version and IP address when clicking the clock
 # in the Login window (default: not set).
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
@@ -73,6 +79,10 @@ defaults write com.apple.screencapture disable-shadow -boolean true
 
 # Minimize windows using the "Scale" effect.
 defaults write com.apple.dock mineffect scale
+
+# Reduce dock autohide time
+defaults write com.apple.dock autohide-delay -int 0
+defaults write com.apple.dock autohide-time-modifier -float 0.4
 
 # Finder
 # ----------------------------------------------------------------------------
