@@ -1,15 +1,11 @@
-# Homebrew additions
 tap 'oclint/formulae'
 
-# Homebrew apps
-brew 'mas'
-
-# Work
 brew 'rbenv'
 brew 'mogenerator'
 brew 'carthage'
 brew 'oclint'
 brew 'uncrustify'
+brew 'mas'
 
 cask 'atom'
 cask 'appcode'
@@ -18,23 +14,12 @@ cask 'zoomus'
 cask 'zeplin'
 cask 'skype'
 cask 'google-chrome'
-
-mas 'Xcode', id: 497799835
-mas 'Slack', id: 803453959
-mas 'Easy APNs Provider', id: 989622350
-
-# Cask
 cask 'wwdc'
-
-# Torrents
 cask 'transmission'
 cask 'transmission-remote-gui'
+cask 'vlc'
 
-# Multimedia
-cask 'audacity-lame-library'
-cask 'audacity'
-
-cask 'vnc'
-
-# AppStore
 mas 'Pomodoro One', id: 907364780
+mas 'Slack', id: 803453959
+mas 'Easy APNs Provider', id: 989622350
+mas 'Xcode', id: 497799835
