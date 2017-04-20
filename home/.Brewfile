@@ -18,6 +18,7 @@ cask 'wwdc'
 cask 'transmission'
 cask 'transmission-remote-gui'
 cask 'vlc'
+cask 'telegram'
 
 mas 'Pomodoro One', id: 907364780
 mas 'Slack', id: 803453959
