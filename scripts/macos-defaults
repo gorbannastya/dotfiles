@@ -52,6 +52,9 @@ defaults write com.apple.screensaver askForPassword -bool true
 # Require password immediately after sleep
 defaults write com.apple.screensaver askForPasswordDelay 0
 
+#set the screen saver delay in seconds, 600 = 10 minutes
+defaults -currentHost write com.apple.screensaver idleTime 600
+
 # Sharing
 # ----------------------------------------------------------------------------
 
