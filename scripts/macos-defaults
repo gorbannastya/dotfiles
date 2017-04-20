@@ -46,6 +46,12 @@ rbenv init
 # Allows installing apps from anywhere
 sudo spctl --master-disable
 
+# Ask for password on screensaver
+defaults write com.apple.screensaver askForPassword -bool true
+
+# Require password immediately after sleep
+defaults write com.apple.screensaver askForPasswordDelay 0
+
 # Sharing
 # ----------------------------------------------------------------------------
 
@@ -81,6 +87,18 @@ defaults write com.apple.screencapture disable-shadow -boolean true
 
 # Disable useless dashboard
 defaults write com.apple.dashboard mcx-disabled -boolean true
+
+# Energy
+# ----------------------------------------------------------------------------
+
+# Set display sleep time on battery
+sudo pmset -b displaysleep 5
+
+# Disable system sleep on charger
+sudo pmset -c sleep 0
+
+# Show battery level in percents in menu bar
+defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 
 # Dock
 # ----------------------------------------------------------------------------
@@ -135,9 +153,6 @@ defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true
 
 # Disable annoying "are you sure you want to open it" messages
 defaults write com.apple.LaunchServices LSQuarantine -bool NO
-
-# Show battery level in percents in menu bar
-defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 
 # XCode
 # ----------------------------------------------------------------------------
